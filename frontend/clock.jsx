@@ -40,7 +40,10 @@ class Clock extends React.Component {
                 <h1>Clock</h1>
                 <div>
                     <p>Time: {hours}:{minutes}:{seconds} PDT</p> 
+                    <p>Date: {hours}:{minutes}:{seconds} PDT</p> 
+
                 </div>
+
             </div>
             
         )
