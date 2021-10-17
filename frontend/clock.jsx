@@ -13,9 +13,9 @@ class Clock extends React.Component {
     this.intervalId = setInterval(this.tick, 1000);
   }
 
-  componentWillUnmount() {
-    clearInterval(this.intervalId);
-  }
+//   componentWillUnmount() {
+//     clearInterval(this.intervalId);
+//   }
   tick() {
     this.setState({ time: new Date() });
   }
@@ -38,7 +38,6 @@ class Clock extends React.Component {
       hours = `0${hours}`;
     }
     return (
-      <div id="app">
         <div id="clock">
           <h1 style={{ padding: "20px 0px"}}>Clock</h1>
           <div className="border" style={{ border: "1px solid black" }}>
@@ -53,7 +52,6 @@ class Clock extends React.Component {
             </p>
           </div>
         </div>
-      </div>
     );
   }
 }

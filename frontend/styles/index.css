@@ -42,15 +42,20 @@ table {
 	border-spacing: 0;
 }
 #app {
-	display: flex;
-	justify-content: center; /* horizontal*/
-	/* align-items: center; //vertical */
+	/* text-align: center; */
+	display: flex; 
+	justify-content: center; /*horizontal*/
+	align-items: center; 
+	flex-direction: column;
 }
-#clock{
+#clock {
     font-family: 'Orbitron', sans-serif;
 	width: 500px;
+	/* display: block; */
 }
-
+/* #weather{
+	display: block;
+} */
 .clock-container{
 	display: flex;
 	justify-content: space-between; 
