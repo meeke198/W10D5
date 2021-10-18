@@ -5,20 +5,33 @@ import Weather from "./weather";
 class App extends React.Component {
   constructor() {
     super(); //setups "this.props"
-    this.state = {};
+    this.state = {screen: 1};
   }
 
   componentDidMount() {
     //run after render
+    console.log("didMount App");
   }
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+     console.log("UnMount App");
+  }
+  onSwitch(){
+    console.log("onSwitch ne", this)
+    if (this.state.screen === 1){
+      this.setState({screen: 2});
+    } else {
+      this.setState({screen: 1});
+    }
+  }
 
   render() {
     return (
       <div id="app">
-        <Clock/>
-        <Weather/>
+        {this.state.screen === 1 ? <Clock/> : <Weather/>}
+        {/* <Clock/>
+        <Weather/> */}
+        <button onClick={this.onSwitch.bind(this)}>Switch</button>
       </div>
     );
   }

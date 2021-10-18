@@ -12,6 +12,7 @@ class Weather extends React.Component {
   }
 
   componentDidMount() {  //run after render
+    console.log("didMount Weather");
     const that = this;
    axios
      .get(
@@ -24,7 +25,7 @@ class Weather extends React.Component {
        const feelsLike = response.data.main.feels_like;
        that.setState({text: name + " " + weather + " " + humidity + " " + feelsLike});
     //    console.log("that ne", that);
-       console.log("respone ne", response);
+       console.log("respone", response);
      })
      .catch(function (error) {
        // handle error
@@ -36,7 +37,7 @@ class Weather extends React.Component {
   }
 
   componentWillUnmount() { 
-   
+    console.log("WilUnMount weather");
   }
 
 
